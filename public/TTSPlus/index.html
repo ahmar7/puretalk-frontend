@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- METADATA -->
+    <meta charset="UTF-8">
+    <meta name='viewport'
+          content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta content=""
+          name="description">
+    <meta content=""
+          name="author">
+    <meta name="keywords"
+          content="" />
+    <!-- CSRF TOKEN -->
+    <meta name="csrf-token"
+          content="qUGKXiobaPxN3ucP9Ybz4y9eAMRK1Pyp4dkxKnBi">
+
+    <!-- TITLE -->
+    <title>TTS NST</title>
+
+    <!--Favicon -->
+    <link rel="icon"
+          href="#"
+          type="image/x-icon" />
+
+    <!-- aos css -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Animate css -->
+    <link rel="stylesheet"
+          href="assets/css/animated.css">
+
+    <!--Sidemenu css -->
+    <link rel="stylesheet"
+          href="assets/css/sidemenu.css">
+
+    <!-- P-scroll bar css-->
+    <link rel="stylesheet"
+          href="assets/css/p-scrollbar.css">
+
+    <!---Icons css-->
+    <link href="#"
+          rel="stylesheet" />
+
+    <!-- Style css -->
+    <link rel="stylesheet"
+          href="assets/css/scale-extreme.css">
+    <link rel="stylesheet"
+          href="assets/css/material.css">
+
+    <!-- Data Table CSS -->
+    <link rel="stylesheet"
+          href="assets/css/datatables.min.css">
+
+    <!-- Awselect CSS -->
+    <link rel="stylesheet"
+          href="assets/css/awselect.min.css">
+
+    <!-- Sweet Alert CSS -->
+    <link rel="stylesheet"
+          href="assets/css/sweetalert2.min.css">
+
+    <!-- Style css -->
+    <link rel="stylesheet"
+          href="assets/css/app.css">
+
+    <!-- Simplebar css -->
+    <link rel="stylesheet"
+          href="assets/css/simplebar.css">
+
+    <!-- Color Skin CSS -->
+    <link rel="stylesheet"
+          href="assets/css/color.css">
+    <!-- update CSS -->
+    <link rel="stylesheet"
+          href="./assets/css/update.css">
+	<!-- Main style sheet -->
+	<link rel="stylesheet"
+		  type="text/css"
+		  href="../css/style.css">
+          <!-- responsive style sheet -->
+	<link rel="stylesheet"
+		  type="text/css"
+		  href="../css/responsive.css">
+</head>
+
+<body class="app sidebar-mini">
+
+    <!-- LOADER -->
+    <div id="global-loader">
+        <img src="#"
+             alt="loader">
+    </div>
+    <!-- END LOADER -->
+
+    <!-- PAGE -->
+    <div class="page">
+        <div class="page-main">
+            <!-- APP CONTENT -->
+            <div class="app-content main-content">
+
+                <div class="side-app">
+                    <!-- PAGE HEADER -->
+                    <div class="page-header mt-5-7">
+                        <div class="page-leftheader">
+                            <h4 class="page-title mb-0">Puretalk.ai TTS +</h4>
+                            <ol class="breadcrumb mb-2">
+                                <li class="breadcrumb-item active"
+                                    aria-current="page"><a href="#"> Text-to-Speech</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- END PAGE HEADER -->
+                    <div class="details-form">
+                        <h1>Our TTS+ solution</h1>
+                        <p>Modernize your contact centers with conversational AI tools that drive customer satisfaction.
+                            Enable your organization with intelligence tools that will lead to reduced costs, optimized
+                            support agents, and more.</p>
+                        <ul class="form-list">
+
+                            <li>Build synergy with customers with highly responsive conversational tools
+                            </li>
+                            <li>Create consistent brand voices across all customer access points
+                            </li>
+                            <li>Establish familiarity with voice agents your customer will recognize</li>
+                            <li>
+                                Save time and money by personalizing voices</li>
+
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-xm-12">
+                            <div class="card border-0">
+                                <div class="card-body pt-7 pl-7 pr-7 pb-4"
+                                     id="tts-body-minify">
+                                    <form id="synthesize-text-form"
+                                          action="#"
+                                          listen="#"
+                                          method="POST"
+                                          enctype="multipart/form-data">
+                                        <input type="hidden"
+                                               name="_token"
+                                               value="qUGKXiobaPxN3ucP9Ybz4y9eAMRK1Pyp4dkxKnBi">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-12">
+                                                <div class="form-group">
+                                                    <select id="languages"
+                                                            name="language"
+                                                            data-placeholder="Pick Your Language:"
+                                                            data-callback="language_select">
+                                                        <option value="en-US"
+                                                                data-img="https://googlewavenet.berkine.space/img/flags/us.svg"
+                                                                selected> English (USA)
+                                                        </option>
+                                                        <option value="fr-FR"
+                                                                data-img="https://googlewavenet.berkine.space/img/flags/fr.svg">
+                                                            French (France) Coming Soon
+                                                        </option>
+                                                        <option value="es-ES"
+                                                                data-img="https://googlewavenet.berkine.space/img/flags/es.svg">
+                                                            Spanish (Spain) Coming Soon
+                                                        </option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-md-10 col-sm-10 pr-0"
+                                                         id="voice-minify">
+                                                        <div class="form-group">
+                                                            <select id="voices"
+                                                                    name="voice"
+                                                                    data-placeholder="Choose Your Voice:"
+                                                                    data-callback="voice_select">
+                                                                <option value="en-US-Wavenet-C"
+                                                                        id="en-US-Wavenet-C"
+                                                                        data-img="https://googlewavenet.berkine.space/voices/gcp/avatars/1.jpg"
+                                                                        data-id="en-US-Wavenet-C"
+                                                                        data-lang="en-US"
+                                                                        data-type="neural"
+                                                                        data-gender="TTS-NST"
+                                                                        data-voice="Gabby"
+                                                                        data-url="https://googlewavenet.berkine.space/voices/gcp/caroline-nrl.mp3"
+                                                                        selected
+                                                                        data-class="">
+                                                                    Gabby
+                                                                </option>
+                                                                <!--<option value="sv-SE-Wavenet-D"
+                                                                    id="sv-SE-Wavenet-D"
+                                                                    data-img="https://googlewavenet.berkine.space/voices/gcp/avatars/7.jpg"
+                                                                    data-id="sv-SE-Wavenet-D"
+                                                                    data-lang="sv-SE"
+                                                                    data-type="neural"
+                                                                    data-gender="Female"
+                                                                    data-voice="Raisa"
+                                                                    data-url="https://googlewavenet.berkine.space/voices/gcp/raisa-nrl.mp3"
+
+                                                                    data-class=" remove-voice ">
+                                                                Raisa
+                                                            </option> -->
+                                                                <!--<option value="sv-SE-Wavenet-E"-->
+                                                                <!--  id="sv-SE-Wavenet-E" -->
+                                                                <!--    data-img="https://googlewavenet.berkine.space/voices/gcp/avatars/16.jpg"
+                                                                    data-id="sv-SE-Wavenet-E"
+                                                                    data-lang="sv-SE"
+                                                                    data-type="neural"
+                                                                    data-gender="Male"
+                                                                    data-voice="Markus"
+                                                                    data-url="https://googlewavenet.berkine.space/voices/gcp/markus-nrl.mp3"
+
+                                                                    data-class=" remove-voice "> -->
+                                                                <!--  Markus
+                                                            </option> -->
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 col-sm-2"
+                                                         id="preview-box">
+                                                        <button class="btn btn-special create-project"
+                                                                type="button"
+                                                                onclick="previewPlay(this)"
+                                                                src=""
+                                                                type="audio/mpeg"
+                                                                id="preview"
+                                                                data-tippy-content="Preview Selected Voice">
+                                                            <svg style="color: #0a0c0d !important;"
+                                                                 xmlns="http://www.w3.org/2000/svg"
+                                                                 width="16"
+                                                                 height="16"
+                                                                 fill="currentColor"
+                                                                 class="bi bi-volume-up-fill"
+                                                                 viewBox="0 0 16 16">
+                                                                <path
+                                                                      d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z" />
+                                                                <path
+                                                                      d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z" />
+                                                                <path
+                                                                      d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-md-10 col-sm-10 pr-0"
+                                                         id="project-box">
+                                                        <div class="form-group">
+                                                            <select id="project"
+                                                                    name="project"
+                                                                    data-placeholder="Select Project Name">
+                                                                <option value="all"> All Projects</option>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 col-sm-2"
+                                                         id="add-project-box">
+                                                        <div class="dropdown">
+                                                            <button class="btn btn-special create-project"
+                                                                    type="button"
+                                                                    id="add-project"
+                                                                    data-tippy-content="Create New Project">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                     width="16"
+                                                                     height="16"
+                                                                     fill="currentColor"
+                                                                     class="bi bi-filter-circle-fill"
+                                                                     viewBox="0 0 16 16">
+                                                                    <path
+                                                                          d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM3.5 5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zM5 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-12">
+                                                <div class="input-box mb-0"
+                                                     id="textarea-box">
+                                                    <input type="text"
+                                                           class="form-control"
+                                                           name="title"
+                                                           id="title">
+                                                    <label class="input-label">
+                                                        <span class="input-label-content input-label-main">Text Title
+                                                            (Optional)</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row mb-4">
+                                            <div class="col-md-3 col-sm-12"
+                                                 id="audio-format-box">
+                                                <div id="audio-format"
+                                                     role="radiogroup">
+                                                    <span id="mp3-format">
+                                                        <div class="radio-control">
+                                                            <input type="radio"
+                                                                   name="format"
+                                                                   class="input-control"
+                                                                   id="mp3"
+                                                                   value="mp3"
+                                                                   checked>
+                                                            <label for="mp3"
+                                                                   class="label-control">MP3</label>
+                                                        </div>
+                                                    </span>
+                                                    <span id="wav-format">
+                                                        <div class="radio-control">
+                                                            <input type="radio"
+                                                                   name="format"
+                                                                   class="input-control"
+                                                                   id="wav"
+                                                                   value="wav">
+                                                            <label for="wav"
+                                                                   class="label-control"
+                                                                   id="wav-label">WAV</label>
+                                                        </div>
+                                                    </span>
+                                                    <span id="ogg-format">
+                                                        <div class="radio-control">
+                                                            <input type="radio"
+                                                                   name="format"
+                                                                   class="input-control"
+                                                                   id="ogg"
+                                                                   value="ogg">
+                                                            <label for="ogg"
+                                                                   class="label-control"
+                                                                   id="wav-label">OGG</label>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-md-10 col-sm-10 pr-0"
+                                                         id="voice-minify">
+                                                        <div class="form-group">
+                                                            <select id="audio-file"
+                                                                    data-placeholder="Include Audio File"
+                                                                    data-callback="audio_select">
+                                                                <option value="add_audio_file">Add New Audio
+                                                                    File</audio>
+                                                                <option value="use_url">Use Direct URL Link</audio>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 col-sm-2"
+                                                         id="preview-box">
+                                                        <button class="btn btn-special create-project"
+                                                                type="button"
+                                                                onclick="previewAudio(this)"
+                                                                src=""
+                                                                id="preview-audio"
+                                                                data-tippy-content="Listen Selected Audio File">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                 width="16"
+                                                                 height="16"
+                                                                 fill="currentColor"
+                                                                 class="bi bi-music-note"
+                                                                 viewBox="0 0 16 16">
+                                                                <path
+                                                                      d="M9 13c0 1.105-1.12 2-2.5 2S4 14.105 4 13s1.12-2 2.5-2 2.5.895 2.5 2z" />
+                                                                <path fill-rule="evenodd"
+                                                                      d="M9 3v10H8V3h1z" />
+                                                                <path
+                                                                      d="M8 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 13 2.22V4L8 5V2.82z" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row mb-6">
+                                            <div class="col-md col-sm-12 special-buttons">
+                                                <div class="dropdown">
+                                                    <button class="btn btn-special dropdown-toggle"
+                                                            type="button"
+                                                            id="sayAs"
+                                                            data-toggle="dropdown"
+                                                            aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                        Say as
+                                                    </button>
+                                                    <div class="dropdown-menu"
+                                                         aria-labelledby="sayAs">
+                                                        <button class="dropdown-item"
+                                                                type="button"
+                                                                id="">
+                                                            Characters
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button"
+                                                                id="">
+                                                            Spell Out
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button"
+                                                                id="">
+                                                            Cardinal
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button"
+                                                                id="">
+                                                            Ordinal
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button"
+                                                                id="">
+                                                            Fraction
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button"
+                                                                id="">Unit
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button"
+                                                                id="">Time
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button"
+                                                                id="">Date
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button"
+                                                                id="">
+                                                            Beep Out
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button"
+                                                                id="">
+                                                            Telephone
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md col-sm-12 special-buttons">
+                                                <div class="dropdown">
+                                                    <button class="btn btn-special dropdown-toggle"
+                                                            type="button"
+                                                            id="emphasis"
+                                                            data-toggle="dropdown"
+                                                            aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                        Emphasis
+                                                    </button>
+                                                    <div class="dropdown-menu"
+                                                         aria-labelledby="emphasis">
+                                                        <button class="dropdown-item"
+                                                                type="button"
+                                                                id="">
+                                                            Reduced
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button"
+                                                                id="">
+                                                            Moderate
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button"
+                                                                id="">
+                                                            Strong
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md col-sm-12 special-buttons">
+                                                <div class="dropdown">
+                                                    <button class="btn btn-special dropdown-toggle"
+                                                            type="button"
+                                                            id="volume"
+                                                            data-toggle="dropdown"
+                                                            aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                        Volume
+                                                    </button>
+                                                    <div class="dropdown-menu"
+                                                         aria-labelledby="volume">
+                                                        <button class="dropdown-item"
+                                                                type="button">
+                                                            Silent
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">
+                                                            x-Soft
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">Soft
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">
+                                                            Medium
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">Loud
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">
+                                                            x-Loud
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md col-sm-12 special-buttons">
+                                                <div class="dropdown">
+                                                    <button class="btn btn-special dropdown-toggle"
+                                                            type="button"
+                                                            id="speed"
+                                                            data-toggle="dropdown"
+                                                            aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                        Speed
+                                                    </button>
+                                                    <div class="dropdown-menu"
+                                                         aria-labelledby="speed">
+                                                        <button class="dropdown-item"
+                                                                type="button">
+                                                            x-Slow
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">Slow
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">
+                                                            Medium
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">Fast
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">
+                                                            x-Fast
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md col-sm-12 special-buttons">
+                                                <div class="dropdown">
+                                                    <button class="btn btn-special dropdown-toggle"
+                                                            type="button"
+                                                            id="pitch"
+                                                            data-toggle="dropdown"
+                                                            aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                        Pitch
+                                                    </button>
+                                                    <div class="dropdown-menu"
+                                                         aria-labelledby="pitch">
+                                                        <button class="dropdown-item"
+                                                                type="button">x-Low
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">Low
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">
+                                                            Medium
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">High
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">
+                                                            x-High
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md col-sm-12 special-buttons">
+                                                <div class="dropdown">
+                                                    <button class="btn btn-special dropdown-toggle"
+                                                            type="button"
+                                                            id="pause"
+                                                            data-toggle="dropdown"
+                                                            aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                        Pauses
+                                                    </button>
+                                                    <div class="dropdown-menu"
+                                                         aria-labelledby="pause">
+                                                        <button class="dropdown-item"
+                                                                type="button">0
+                                                            second
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">1
+                                                            second
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">2
+                                                            seconds
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">3
+                                                            seconds
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">4
+                                                            seconds
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">5
+                                                            seconds
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">6
+                                                            seconds
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">7
+                                                            seconds
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">8
+                                                            seconds
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">9
+                                                            seconds
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">10
+                                                            seconds
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">
+                                                            Paragraph
+                                                        </button>
+                                                        <button class="dropdown-item"
+                                                                type="button">
+                                                            Sentence
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md col-sm-12 special-buttons">
+                                                <div class="dropdown">
+                                                    <button class="btn btn-special"
+                                                            type="button"
+                                                            id="null">Replace Text
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md col-sm-12 special-buttons"
+                                                 id="upload-file">
+                                                <div class="dropdown">
+                                                    <button class="btn btn-special"
+                                                            type="button"
+                                                            onclick="readFile();"
+                                                            id="read-file">Upload File
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div id="textarea-outer-box"
+                                                     class="p-2">
+                                                    <label class="input-label">
+                                                        <span class="input-label-content input-label-main">Text to
+                                                            Speech</span>
+                                                    </label>
+                                                    <div id="textarea-container">
+                                                        <div id="textarea-row-box">
+                                                            <div class="textarea-row"
+                                                                 id="maintextarea">
+                                                                <div class="textarea-voice">
+                                                                    <div class="ml-1 mt-1 voicee">
+                                                                        <img src=""
+                                                                             id="ZZZOOOVVVIMG"
+                                                                             data-tippy-content="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="textarea-text">
+                                                                    <textarea class="form-control textarea"
+                                                                              name="textarea[]"
+                                                                              id="ZZZOOOVVVZ"
+                                                                              data-voice=""
+                                                                              onkeyup="countCharacters();"
+                                                                              onmousedown="mouseDown(this);"
+                                                                              rows="1"
+                                                                              placeholder="Enter your text here to synthesize..."
+                                                                              maxlength="5000"></textarea>
+                                                                </div>
+                                                                <div class="textarea-actions">
+                                                                    <div class="textarea-buttons">
+                                                                        <button class="btn buttons synthesizeText"
+                                                                                id="ZZZOOOVVVL"
+                                                                                onclick="listenRow(this); return false;"
+                                                                                data-tippy-content="Listen Text">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                 width="16"
+                                                                                 height="16"
+                                                                                 fill="currentColor"
+                                                                                 class="bi bi-music-note-list"
+                                                                                 viewBox="0 0 16 16">
+                                                                                <path
+                                                                                      d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z" />
+                                                                                <path fill-rule="evenodd"
+                                                                                      d="M12 3v10h-1V3h1z" />
+                                                                                <path
+                                                                                      d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z" />
+                                                                                <path fill-rule="evenodd"
+                                                                                      d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z" />
+                                                                            </svg>
+                                                                        </button>
+                                                                        <button class="btn buttons addPause"
+                                                                                id="ZZZOOOVVVP"
+                                                                                onclick="addPause(this); return false;"
+                                                                                data-tippy-content="Add Pause After Text">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                 width="16"
+                                                                                 height="16"
+                                                                                 fill="currentColor"
+                                                                                 class="bi bi-hourglass-split"
+                                                                                 viewBox="0 0 16 16">
+                                                                                <path
+                                                                                      d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z" />
+                                                                            </svg>
+                                                                        </button>
+                                                                        <button type="button"
+                                                                                class="btn buttons deleteText"
+                                                                                id="ZZZOOOVVVDEL"
+                                                                                onclick="deleteRow(this); return false;"
+                                                                                data-tippy-content="Delete This Text Block">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                 width="16"
+                                                                                 height="16"
+                                                                                 fill="currentColor"
+                                                                                 class="bi bi-trash3-fill"
+                                                                                 viewBox="0 0 16 16">
+                                                                                <path
+                                                                                      d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                                                                            </svg>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="textarea-add text-center mt-2">
+                                                            <button class="btn"
+                                                                    id="addTextRow"
+                                                                    data-tippy-content="Add New Text Block">
+                                                                <!--                                                            <i class="fa-solid fa-layer-plus"></i>-->
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                     width="16"
+                                                                     height="16"
+                                                                     fill="currentColor"
+                                                                     class="bi bi-layers-fill"
+                                                                     viewBox="0 0 16 16">
+                                                                    <path
+                                                                          d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z" />
+                                                                    <path
+                                                                          d="m2.125 8.567-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l-5.17-2.756z" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div id="textarea-settings">
+                                                        <div class="character-counter">
+                                                            <span id="">0 characters, 1 line</span>
+                                                        </div>
+
+                                                        <div class="clear-button">
+                                                            <button type="button"
+                                                                    id="delete-all-lines">Delete All Lines
+                                                            </button>
+                                                            <button type="button"
+                                                                    id="clear-effects">Clear Effects</button>
+                                                            <button type="button"
+                                                                    id="clear-text">Clear Text</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-5 text-center"
+                                             id="waveform-box">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div id="waveform"></div>
+                                                    <div id="wave-timeline"></div>
+                                                </div>
+
+                                                <div class="col-sm-12">
+                                                    <div id="controls"
+                                                         class="mt-4 mb-3">
+                                                        <button id="backwardBtn"
+                                                                class="result-play result-play-sm mr-2"><i
+                                                               class="fa fa-backward"></i></button>
+                                                        <button id="playBtn"
+                                                                class="result-play result-play-sm mr-2"><i
+                                                               class="fa fa-play"></i></button>
+                                                        <button id="stopBtn"
+                                                                class="result-play result-play-sm mr-2"><i
+                                                               class="fa fa-stop"></i></button>
+                                                        <button id="forwardBtn"
+                                                                class="result-play result-play-sm mr-2"><i
+                                                               class="fa fa-forward"></i></button>
+                                                        <a id="downloadBtn"
+                                                           class="result-play result-play-sm"
+                                                           href=""
+                                                           download><i class="fa fa-download"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer border-0 text-center mt-3">
+                                            <span id="processing"><img
+                                                     src="https://googlewavenet.berkine.space/img/svgs/processing.svg"
+                                                     alt=""></span>
+                                            <button type="button"
+                                                    class="btn btn-primary main-action-button mr-2"
+                                                    id="">Listen
+                                            </button>
+                                            <button type="button"
+                                                    class="btn btn-primary main-action-button"
+                                                    id="">Synthesize
+                                            </button>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+			=====================================================
+				Fancy Feature Seventeen
+			=====================================================
+			-->
+		<div class="fancy-feature-seventeen mt-150 md-mt-90"
+			 id="product">
+			<div class="bg-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-sm-6"
+							 data-aos="fade-up"
+							 data-aos-duration="1200">
+							<div class="block-meta">
+								<div class="icon d-flex align-items-end"><img src="../images/icon/94.svg"
+										 alt=""></div>
+								<h4>Autonomous</h4>
+								<p>end-to-end management of customers' request</p>
+							</div> <!-- /.block-meta -->
+						</div>
+						<div class="col-lg-4 col-sm-6"
+							 data-aos="fade-up"
+							 data-aos-duration="1200"
+							 data-aos-delay="100">
+							<div class="block-meta">
+								<div class="icon d-flex align-items-end"><img src="../images/icon/95.svg"
+										 alt=""></div>
+								<h4>Personalization</h4>
+								<p>Customizable solutions tailored to your systems</p>
+							</div> <!-- /.block-meta -->
+						</div>
+						<div class="col-lg-4 col-sm-6"
+							 data-aos="fade-up"
+							 data-aos-duration="1200"
+							 data-aos-delay="200">
+							<div class="block-meta">
+								<div class="icon d-flex align-items-end"><img src="../images/icon/96.svg"
+										 alt=""></div>
+								<h4>Accommodation</h4>
+								<p>Omni-channel and multi-lingual integrations for ease of use and convenience
+								</p>
+							</div> <!-- /.block-meta -->
+						</div>
+						<div class="col-lg-4 col-sm-6"
+							 data-aos="fade-up"
+							 data-aos-duration="1200">
+							<div class="block-meta">
+								<div class="icon d-flex align-items-end"><img src="../images/icon/97.svg"
+										 alt=""></div>
+								<h4>Competence</h4>
+								<p>Intuitive knowledge bases for employee support backed by artificial intelligence</p>
+							</div> <!-- /.block-meta -->
+						</div>
+						<div class="col-lg-4 col-sm-6"
+							 data-aos="fade-up"
+							 data-aos-duration="1200"
+							 data-aos-delay="100">
+							<div class="block-meta">
+								<div class="icon d-flex align-items-end"><img src="../images/icon/98.svg"
+										 alt=""></div>
+								<h4>Time Management</h4>
+								<p>Our artificial intelligent speech can assist with complex issues saving your team time and money</p>
+							</div> <!-- /.block-meta -->
+						</div>
+						<div class="col-lg-4 col-sm-6"
+							 data-aos="fade-up"
+							 data-aos-duration="1200"
+							 data-aos-delay="200">
+							<div class="block-meta">
+								<div class="icon d-flex align-items-end"><img src="../images/icon/99.svg"
+										 alt=""></div>
+								<h4>Innovative</h4>
+								<p>state-of-the-art intelligent solution aimed at receiving and performing repetitive tasks allowing your team to focus on innovation process
+								</p>
+							</div> <!-- /.block-meta -->
+						</div>
+					</div>
+				</div>
+			</div> <!-- /.bg-wrapper -->
+		</div> <!-- /.fancy-feature-seventeen -->
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <!-- END APP CONTENT -->
+    </div>
+    </div><!-- END PAGE -->
+
+    <!-- Jquery js-->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+
+    <!-- Bootstrap4 js-->
+    <script src="https://googlewavenet.berkine.space/plugins/bootstrap/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+
+    <!--Sidemenu js-->
+    <script src="assets/js/sidemenu.js"></script>
+
+
+    <!-- P-scroll js-->
+    <script src="assets/js/p-scrollbar.js"></script>
+    <script src="assets/js/p-scroll.js"></script>
+
+
+    <!-- Green Audio Players JS -->
+    <!--<script src="assets/js/green-audio-player.js"></script>-->
+    <!--<script src="assets/js/audio-player.js"></script>-->
+    <script src="assets/js/wavesurfer.min.js"></script>
+    <script src="assets/js/wavesurfer.cursor.min.js"></script>
+    <script src="assets/js/wavesurfer.timeline.min.js"></script>
+
+
+    <!-- Data Tables JS -->
+    <script src="assets/js/datatables.min.js"></script>
+
+
+    <!-- Awselect JS -->
+    <script src="assets/js/awselect-custom.js"></script>
+    <script src="assets/js/sweetalert2.all.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/awselect.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            "use strict";
+
+            function format(d) {
+                // `d` is the original data object for the row
+                return '<div class="slider">' +
+                    '<table class="details-table">' +
+                    '<tr>' +
+                    '<td class="details-title" width="10%">Title:</td>' +
+                    '<td>' + ((d.title == null) ? '' : d.title) + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                    '<td class="details-title" width="10%">Text Clean:</td>' +
+                    '<td>' + d.text + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                    '<td class="details-title" width="10%">Text Raw:</td>' +
+                    '<td>' + d.text_raw + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                    '<td class="details-result" width="10%">Synthesized Result:</td>' +
+                    '<td><audio controls preload="none">' +
+                    '<source src="' + d.result + '" type="' + d.audio_type + '">' +
+                    '</audio></td>' +
+                    '</tr>' +
+                    '</table>' +
+                    '</div>';
+            }
+
+
+            // INITILIZE DATATABLE
+            var table = $('#resultTable').DataTable({
+                "lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
+                responsive: {
+                    details: { type: 'column' }
+                },
+                colReorder: true,
+                language: {
+                    "emptyTable": "<div><img id='no-results-img' src='#'><br>No synthesized text results yet</div>",
+                    search: "<i class='fa fa-search search-icon'></i>",
+                    lengthMenu: '_MENU_ ',
+                    paginate: {
+                        first: '<i class="fa fa-angle-double-left"></i>',
+                        last: '<i class="fa fa-angle-double-right"></i>',
+                        previous: '<i class="fa fa-angle-left"></i>',
+                        next: '<i class="fa fa-angle-right"></i>'
+                    }
+                },
+                pagingType: 'full_numbers',
+                processing: true,
+                serverSide: true,
+                ajax: "https://googlewavenet.berkine.space/user/tts",
+                columns: [{
+                    "className": 'details-control',
+                    "orderable": false,
+                    "searchable": false,
+                    "data": null,
+                    "defaultContent": ''
+                },
+                {
+                    data: 'created-on',
+                    name: 'created-on',
+                    orderable: true,
+                    searchable: true
+                },
+                {
+                    data: 'custom-language',
+                    name: 'custom-language',
+                    orderable: true,
+                    searchable: true
+                },
+                {
+                    data: 'voice',
+                    name: 'voice',
+                    orderable: true,
+                    searchable: true
+                },
+                {
+                    data: 'gender',
+                    name: 'gender',
+                    orderable: true,
+                    searchable: true
+                },
+                {
+                    data: 'custom-voice-type',
+                    name: 'custom-voice-type',
+                    orderable: true,
+                    searchable: true
+                },
+                {
+                    data: 'single',
+                    name: 'single',
+                    orderable: true,
+                    searchable: true
+                },
+                {
+                    data: 'download',
+                    name: 'download',
+                    orderable: true,
+                    searchable: true
+                },
+                {
+                    data: 'result_ext',
+                    name: 'result_ext',
+                    orderable: true,
+                    searchable: true
+                },
+                {
+                    data: 'characters',
+                    name: 'characters',
+                    orderable: true,
+                    searchable: true
+                },
+                {
+                    data: 'project',
+                    name: 'project',
+                    orderable: true,
+                    searchable: true
+                },
+                {
+                    data: 'actions',
+                    name: 'actions',
+                    orderable: false,
+                    searchable: false
+                },
+                ]
+            });
+
+
+            $('#resultTable tbody').on('click', 'td.details-control', function () {
+                var tr = $(this).closest('tr');
+                var row = table.row(tr);
+
+                if (row.child.isShown()) {
+                    // This row is already open - close it
+                    $('div.slider', row.child()).slideUp(function () {
+                        row.child.hide();
+                        tr.removeClass('shown');
+                    });
+                } else {
+                    // Open this row
+                    row.child(format(row.data()), 'no-padding').show();
+                    tr.addClass('shown');
+
+                    $('div.slider', row.child()).slideDown();
+                }
+            });
+
+
+            let user_voice = "en-US-Wavenet-C";
+            voice_select(user_voice);
+
+
+            // CREATE NEW PROJECT
+            $(document).on('click', '#add-project', function (e) {
+
+                e.preventDefault();
+
+                Swal.fire({
+                    title: 'Create New Project',
+                    showCancelButton: true,
+                    confirmButtonText: 'Create',
+                    reverseButtons: true,
+                    closeOnCancel: true,
+                    input: 'text',
+                }).then((result) => {
+                    if (result.value) {
+                        var formData = new FormData();
+                        formData.append("new-project", result.value);
+                        $.ajax({
+                            headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+                            method: 'post',
+                            url: 'project',
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function (data) {
+                                if (data['status'] == 'success') {
+                                    Swal.fire('Project Created', 'New project has been successfully created', 'success');
+                                    location.reload();
+                                } else {
+                                    Swal.fire('Project Creation Error', data['message'], 'error');
+                                }
+                            },
+                            error: function (data) {
+                                Swal.fire({ type: 'error', title: 'Oops...', text: 'Something went wrong!' })
+                            }
+                        })
+                    } else if (result.dismiss !== Swal.DismissReason.cancel) {
+                        Swal.fire('No Project Name Entered', 'Make sure to provide a new project name before creating', 'error')
+                    }
+                })
+            });
+
+
+            // DELETE SYNTHESIZE RESULT
+            $(document).on('click', '.deleteResultButton', function (e) {
+
+                e.preventDefault();
+
+                Swal.fire({
+                    title: 'Confirm Result Deletion',
+                    text: 'It will permanently delete this synthesize result',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Delete',
+                    reverseButtons: true,
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        var formData = new FormData();
+                        formData.append("id", $(this).attr('id'));
+                        $.ajax({
+                            headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+                            method: 'post',
+                            url: 'tts/delete',
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function (data) {
+                                if (data == 'success') {
+                                    Swal.fire('Result Deleted', 'Synthesize result has been successfully deleted', 'success');
+                                    $("#resultTable").DataTable().ajax.reload();
+                                } else {
+                                    Swal.fire('Delete Failed', 'There was an error while deleting this result', 'error');
+                                }
+                            },
+                            error: function (data) {
+                                Swal.fire({ type: 'error', title: 'Oops...', text: 'Something went wrong!' })
+                            }
+                        })
+                    }
+                })
+            });
+
+        });
+    </script>
+
+    <!-- Simplebar JS -->
+    <script src="assets/js/simplebar.min.js"></script>
+
+
+    <!-- Flash JS -->
+    <script src="assets/js/flash.min.js"></script>
+
+
+    <!-- Tippy css -->
+    <script src="https://googlewavenet.berkine.space/plugins/tippy/popper.min.js"></script>
+    <!--<script src="assets/js/popper.min.js"></script>-->
+    <script src="assets/js/tippy-bundle.umd.min.js"></script>
+
+	<!-- AOS js -->
+		<script src="../vendor/aos-next/dist/aos.js"></script>
+    <!-- Custom js-->
+    <script src="assets/js/custom.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
